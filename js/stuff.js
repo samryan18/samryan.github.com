@@ -41,7 +41,7 @@ svg.selectAll("circle")
     .data(nodes.slice(1))
   .enter().append("svg:circle")
     .attr("r", function(d) { return d.radius - 2; })
-    .style("fill", function(d, i) { return color(i % 3); });
+    .style("fill", function(d, i) { return color(i); });
 
 force.on("tick", function(e) {
   var q = d3.geom.quadtree(nodes),
