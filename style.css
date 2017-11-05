@@ -1,5 +1,6 @@
 body {
-  background: url(texture-noise.png);
+  background: #000;
+  color: #fff;
   margin: 0;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica;
@@ -27,6 +28,8 @@ circle {
   stroke: #000;
   stroke-opacity: .5;
 }
+
+
 /*
 #chart, #header, #footer {
   position: absolute;
