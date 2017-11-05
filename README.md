@@ -1,2 +1,2 @@
-# samryan.github.com
+# samryan.me
 For fun website
