@@ -30,17 +30,24 @@ function getCourseData(sDept, sNum, sYear, sSem)
 	httpGetAsync(sRequestURL, receiveRequest)
 }
 
+
+function receiveRequest2( sQueryResult ) {
+    console.log(""+sQueryResult)
+    jsonQueryResult = JSON.parse(sQueryResult)
+    console.log(jsonQueryResult)
+
+    alert(jsonQueryResult.result.primary_alias + ": " + jsonQueryResult.result.name 
+        + "\nmost recently offered: " + jsonQueryResult.result.semester
+        + "\n\n" + jsonQueryResult.result.description)
+
+}
+
 function receiveRequest( sQueryResult ) 
 {
-	jsonQueryResult = JSON.parse(sQueryResult)
-	console.log(jsonQueryResult)
-    alert(jsonQueryResult.result.name 
-        + "\nmost recently taught: " + jsonQueryResult.result.courses[jsonQueryResult.result.courses.length - 1].semester)
-	// jsonQueryResult.result.values.forEach(function(o) {
-	// 	console.log(o)
- 	// 	})
-	// 	console.log("Course Quality: " + sQueryResult.result.values.ratings.Course)
-
+    jsonQueryResult = JSON.parse(sQueryResult)
+    var mostRecentID = (jsonQueryResult.result.courses[jsonQueryResult.result.courses.length - 1].id)
+    var sRequestURL = "http://api.penncoursereview.com/v1/courses/" + mostRecentID +"?token=public"
+    httpGetAsync(sRequestURL, receiveRequest2)
 }
 
 /*************************************************************************
@@ -89,7 +96,6 @@ function httpGetAsync(theUrl, callback, AuthorizationBearer, AuthorizationToken)
 /*************************************************************************
  ****************** PennRegistrar API Interactions ***********************
  *************************************************************************/
-
 
 // Congratulations, your OpenData account has been approved and is ready for usage! Details follow:
 //  Account id: UPENN_OD_enkb_1003905
