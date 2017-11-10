@@ -1,7 +1,8 @@
 body {
-  background: #000;
-
-  color: #fff;
+  background-image: url("pics/morning.JPG");
+  background-size: 100% ;
+  background-repeat: no-repeat;
+  color: #FFF;
   margin: 0;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica;
@@ -46,3 +47,15 @@ h1, h2, h3, h4, h5, h6 {
   right: 100px;
 }
 */
+#hideAll
+{
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: white;
+  z-index: 99; /* Higher than anything else in the document */
+
+}
+
