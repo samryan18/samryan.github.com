@@ -93,23 +93,3 @@ function httpGetAsync(theUrl, callback, AuthorizationBearer, AuthorizationToken)
 }
 
 
-/*************************************************************************
- ****************** PennRegistrar API Interactions ***********************
- *************************************************************************/
-
-// Congratulations, your OpenData account has been approved and is ready for usage! Details follow:
-//  Account id: UPENN_OD_enkb_1003905
-//  Password: n0oi88llj7bg209a23uo46gsba
-//  Should expire Jan 1, 2020
-
-//  This account will allow you access ONLY to the Registrar?s Course API. You will need to request additional accounts if using additional APIs.
-
-function getRegistrarData() 
-{
-	var AuthorizationBearer = "UPENN_OD_enkb_1003905"
-	var AuthorizationToken = "n0oi88llj7bg209a23uo46gsba"
-	sRequestURL = "https://esb.isc-seo.upenn.edu/8091/open_data/course_info/ACCT/?page_number=2&number_of_results_per_page=20";
-	httpGetAsync(sRequestURL, console.log, AuthorizationBearer, AuthorizationToken)
-}
-
-
