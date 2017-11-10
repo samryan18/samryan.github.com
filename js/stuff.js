@@ -3,9 +3,8 @@
 console.log("Hello.")
 
 // Globals
-var numNodes = 200;
-
-var w = 1280,
+var numNodes = 200,
+    w = 1280, 
     h = 800;
 
 // Create 200 nodes
@@ -31,11 +30,12 @@ root.radius = 0;
 root.fixed = true;
 
 
-force.start();
-
 var svg = d3.select("#body").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
+
+force.start();
+
 
 svg.selectAll("circle")
     .data(nodes.slice(1))
@@ -49,6 +49,7 @@ force.on("tick", function(e) {
       n = nodes.length;
 
   while (++i < n) {
+    // For each node check each other node
     q.visit(collide(nodes[i]));
   }
 
@@ -66,20 +67,21 @@ svg.on("mousemove", function() {
   force.resume();
 });
 
-function collide(node) {
-  // Ensure nodes cannot be on top of eachother
+function collide( node ) {
   var r = node.radius + 16,
       nx1 = node.x - r,
       nx2 = node.x + r,
       ny1 = node.y - r,
       ny2 = node.y + r;
+
   return function(quad, x1, y1, x2, y2) {
     if (quad.point && (quad.point !== node)) {
+      // Calc gravity
       var x = node.x - quad.point.x,
           y = node.y - quad.point.y,
           l = Math.sqrt(x * x + y * y),
           r = node.radius + quad.point.radius;
-      if (l < r) {
+      if (l < r) /* Prevent nodes from being on top of eachother */ {
         l = (l - r) / l * .5;
         node.x -= x *= l;
         node.y -= y *= l;

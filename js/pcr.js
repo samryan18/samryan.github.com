@@ -3,16 +3,13 @@
  *************************************************************************/
 
 
-main()
-
-function main()
+// On button click
+function getCISCourseInfo()
 {
-	var sRequestURL = "http://api.penncoursereview.com/v1/coursehistories/CIS-120?token=public"
-	httpGetAsync(sRequestURL, receiveRequest)
-	getRegistrarData()	
+    var cisCourseNum = prompt("enter CIS course num", "120")
+    var sRequestURL = "http://api.penncoursereview.com/v1/coursehistories/CIS-"+ cisCourseNum +"?token=public"
+    httpGetAsync(sRequestURL, receiveRequest)
 }
-
-
 
 
 /*************************************************************************
@@ -37,6 +34,8 @@ function receiveRequest( sQueryResult )
 {
 	jsonQueryResult = JSON.parse(sQueryResult)
 	console.log(jsonQueryResult)
+    alert(jsonQueryResult.result.name 
+        + "\nmost recently taught: " + jsonQueryResult.result.courses[jsonQueryResult.result.courses.length - 1].semester)
 	// jsonQueryResult.result.values.forEach(function(o) {
 	// 	console.log(o)
  	// 	})
@@ -55,14 +54,19 @@ function httpGetAsync(theUrl, callback, AuthorizationBearer, AuthorizationToken)
     var xmlHttp = new XMLHttpRequest();
 
     xmlHttp.onreadystatechange = function() { 
+
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         	callback(xmlHttp.responseText);
         } else if (xmlHttp.readyState == 4 && xmlHttp.status == 401) {
 		    alert("Oh no, http reqest failed because of authorization issues (401)");
-		}   
+		} else if (xmlHttp.readyState == 4 && xmlHttp.status == 0) {
+            alert("Oh no, http reqest failed because course does not seem to exist in the Penn Course Review database (500)");
+        } 
+
     }
 
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.open("GET", theUrl, true) // true for asynchronous 
+
 
     if (AuthorizationBearer && AuthorizationBearer) {
 

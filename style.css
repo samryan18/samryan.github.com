@@ -1,5 +1,5 @@
 body {
-  background-image: url("pics/morning.JPG");
+  background-image: url("pics/peaceValley.JPG");
   background-size: 100% ;
   background-repeat: no-repeat;
   color: #FFF;
@@ -9,7 +9,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-shadow: 0 1px 0 #fff;
+  /*text-shadow: 0 1px 0 #fff;*/
   font-weight: 300;
   text-align: right;
 }
@@ -26,6 +26,22 @@ h1, h2, h3, h4, h5, h6 {
 .centred {
   margin: auto;  /* Magic! Centred! */
 }
+
+
+#hideAll
+{
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: white;
+  z-index: 99; /* Higher than anything else in the document */
+
+}
+
+
+
 
 
 /* TEMPORARY STUFF */
@@ -47,15 +63,4 @@ h1, h2, h3, h4, h5, h6 {
   right: 100px;
 }
 */
-#hideAll
-{
-  position: fixed;
-  left: 0px; 
-  right: 0px; 
-  top: 0px; 
-  bottom: 0px; 
-  background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
-
-}
 
