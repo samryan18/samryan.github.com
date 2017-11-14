@@ -1,13 +1,21 @@
-/*************************************************************************
- ***************************** Main **************************************
- *************************************************************************/
+
+/* This library was written by Sam Ryan
+ *
+ *
+ * Using penn course review API made by Penn Labs
+ * Full documentation for it can be found at http://pennlabs.org/docs/pcr.html */
+
+
 
 
 // On button click
 function getCISCourseInfo()
 {
     var cisCourseNum = prompt("enter CIS course num", "120")
-    var sRequestURL = "http://api.penncoursereview.com/v1/coursehistories/CIS-"+ cisCourseNum +"?token=public"
+    var sQuery = "coursehistories/CIS-" + cisCourseNum;
+    var sRequestURL = "http://api.penncoursereview.com/v1/" + sQuery + "?token=public"
+
+    // var sRequestURL = "http://api.penncoursereview.com/v1/coursehistories/CIS-"+ cisCourseNum +"?token=public"
     httpGetAsync(sRequestURL, receiveRequest)
 }
 
@@ -15,12 +23,6 @@ function getCISCourseInfo()
 /*************************************************************************
  ****************** PennCourseReviewAPI Interactions *********************
  *************************************************************************/
-
-/* This library was written by Sam Ryan
- *
- *
- * Using penn course review API made by Penn Labs
- * Full documentation for it can be found at http://pennlabs.org/docs/pcr.html */
 
 
 function getCourseData(sDept, sNum, sYear, sSem) 
@@ -31,18 +33,21 @@ function getCourseData(sDept, sNum, sYear, sSem)
 }
 
 
-function receiveRequest2( sQueryResult ) {
+function receiveRequest2(sQueryResult) 
+{
     console.log(""+sQueryResult)
     jsonQueryResult = JSON.parse(sQueryResult)
     console.log(jsonQueryResult)
 
-    alert(jsonQueryResult.result.primary_alias + ": " + jsonQueryResult.result.name 
-        + "\nmost recently offered: " + jsonQueryResult.result.semester
-        + "\n\n" + jsonQueryResult.result.description)
+    var courseInfo = ("<br>"+jsonQueryResult.result.primary_alias + ": " + jsonQueryResult.result.name 
+        + "<br>most recently offered: " + jsonQueryResult.result.semester
+        + "<br><br>" + jsonQueryResult.result.description)
+    $('#courseInfoTEMP').html( courseInfo );
+
 
 }
 
-function receiveRequest( sQueryResult ) 
+function receiveRequest(sQueryResult) 
 {
     jsonQueryResult = JSON.parse(sQueryResult)
     var mostRecentID = (jsonQueryResult.result.courses[jsonQueryResult.result.courses.length - 1].id)
@@ -56,12 +61,10 @@ function receiveRequest( sQueryResult )
 
 
 // Asyncronous get request
-function httpGetAsync(theUrl, callback, AuthorizationBearer, AuthorizationToken)
+function httpGetAsync(theUrl, callback)
 {   
     var xmlHttp = new XMLHttpRequest();
-
     xmlHttp.onreadystatechange = function() { 
-
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         	callback(xmlHttp.responseText);
         } else if (xmlHttp.readyState == 4 && xmlHttp.status == 401) {
@@ -69,26 +72,9 @@ function httpGetAsync(theUrl, callback, AuthorizationBearer, AuthorizationToken)
 		} else if (xmlHttp.readyState == 4 && xmlHttp.status == 0) {
             alert("Oh no, http reqest failed because course does not seem to exist in the Penn Course Review database (500)");
         } 
-
     }
 
-    xmlHttp.open("GET", theUrl, true) // true for asynchronous 
-
-
-    if (AuthorizationBearer && AuthorizationBearer) {
-
-    	// Add security headers
-    	xmlHttp.setRequestHeader("header", 
-    		"Authorization-Bearer, "   + AuthorizationBearer 
-    		+ " Authorization-Token, " + AuthorizationToken)
-
-    	xmlHttp.setRequestHeader("Authorization-Bearer", AuthorizationBearer)
-    	xmlHttp.setRequestHeader("Authorization-Token", AuthorizationToken)
-    	xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*")
-    	console.log( xmlHttp )
-    	
-    } 
-
+    xmlHttp.open("GET", theUrl, true /* true for async */ ) 
     xmlHttp.send();
 }
 
