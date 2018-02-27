@@ -1,2 +1,4 @@
 # samryan.me
-For fun website
+Personal website
+
+Awesome HTML template from html5up.net !
