@@ -1078,7 +1078,7 @@
 			transition-delay: 0.75s;
 			/*this is the main background-image*/
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay4.png");
-			background-size: auto, 1000px 1000px;
+			background-size: auto, 1700px 1700px;
 			background-position: center, center;
 			background-repeat: no-repeat;
 			z-index: 2;
