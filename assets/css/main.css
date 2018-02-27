@@ -1077,8 +1077,8 @@
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			/*this is the main background-image*/
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 900px 900px;
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay4.png");
+			background-size: auto, 1000px 1000px;
 			background-position: center, center;
 			background-repeat: no-repeat;
 			z-index: 2;
@@ -1189,10 +1189,10 @@
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
-		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
-		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
-		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, transparent 55%);
+		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.) 25%, transparent 55%);
+		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.) 25%, transparent 55%);
+		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.) 25%, transparent 55%);
+		background-image: radial-gradient(rgba(0, 0, 0, 0.) 25%, transparent 55%);
 		max-width: 100%;
 		text-align: center;
 	}
