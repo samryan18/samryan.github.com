@@ -125,7 +125,9 @@ Robert’); DROP TABLE Students;
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<!-- <form method="post" action="#"> -->
+								<form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
+  									  action="https://script.google.com/macros/s/AKfycbwPsq7UaYq-Kn5Y1T0gXgGl1RM_H0aFxOcOJt3Kefooc6ZdZD5s/exec">
 									<div class="field half first">
 										<label for="name">Name</label>
 										<input type="text" name="name" id="name" />
@@ -133,6 +135,9 @@ Robert’); DROP TABLE Students;
 									<div class="field half">
 										<label for="email">Email</label>
 										<input type="text" name="email" id="email" />
+										<span id="email-invalid" style="display:none">
+        								Must be a valid email address</span>
+
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
@@ -142,7 +147,12 @@ Robert’); DROP TABLE Students;
 										<li><input type="submit" value="Send Message" class="special" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									
 								</form>
+								  <!-- Customise the Thankyou Message People See when they submit the form: -->
+								<div style="display:none;" id="thankyou_message">
+								  <h2><em>Thanks!</em></h2>
+								</div>
 								<ul class="icons">
 									<!-- <li><a href="https://twitter.com/samryan18" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
 									<li><a href="https://github.com/samryan18" class="icon fa-github"><span class="label">Github</span></a></li>
@@ -155,6 +165,10 @@ Robert’); DROP TABLE Students;
 
 
 					</div>
+
+  
+<!--     <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button> -->
 
 				<!-- Footer -->
 					<footer id="footer">
