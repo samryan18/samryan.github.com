@@ -2,7 +2,6 @@
 // function submit() {
 //     window.alert("github pages doesn't allow me to send post requests :/ workin on it \n\nemail -> samryan@seas.upenn.edu");
 // }
-
 // $(".special").click(submit)``
 
 
@@ -90,7 +89,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
+        console.log(xhr.status, xhr.statusText )
         console.log(xhr.responseText);
         document.getElementById("gform").style.display = "none"; // hide form
         document.getElementById("thankyou_message").style.display = "block";
@@ -105,7 +104,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 }
 function loaded() {
   console.log("Contact form submission handler loaded successfully.");
-  // bind to the submit event of our form
+  // bind to the submit event of form
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
 };

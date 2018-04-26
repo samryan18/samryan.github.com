@@ -1,29 +1,27 @@
 /* Only loads pictures after home page loads so page loads faster */
 
 var pictureHTML = `
-								<span class="image main">
-									<figure><img src="assets/images/overlay.png" alt=""/>
-								    <figcaption>Peace Valley, PA</figcaption></figure>
-								</span>
+								
 						        <span class="image main">
 									<figure><img src="assets/images/GlenPark.jpg" alt="">
 								    <figcaption>Glen Park, SF</figcaption></figure>
 								</span>
-								<span class="image main">
-									<figure><img src="assets/images/MtDave.jpg" alt="">
-								    <figcaption>Mt. Dave, SF</figcaption></figure>
-								</span>
-								<span class="image main">
-									<figure><img src="assets/images/MayLake.jpg" alt="">
-								    <figcaption>May Lake, CA</figcaption></figure>
-								</span>
-								<span class="image main">
-									<figure><img src="assets/images/may3.JPG" alt="">
-								    <figcaption>May Lake, CA</figcaption></figure>
-								</span>
+								
 								<span class="image main">
 									<figure><img src="assets/images/StrawberryMansion.jpg" alt="">
 								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/strawberryMansion3.jpg" alt="">
+								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/strawberryMansion2.jpg" alt="">
+								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/overlay.png" alt=""/>
+								    <figcaption>Peace Valley, PA (Evan Jonokuchi)</figcaption></figure>
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/views.JPG" alt="" >
@@ -34,16 +32,12 @@ var pictureHTML = `
 								    <figcaption>Walmart Parking Lot, Tennessee</figcaption></figure>
 								</span>
 								<span class="image main">
-									<figure><img src="assets/images/Tenaya.jpg" alt="">
-								    <figcaption>Tenaya Canyon, CA</figcaption></figure>
+									<figure><img src="assets/images/MayLake.jpg" alt="">
+								    <figcaption>May Lake, CA</figcaption></figure>
 								</span>
 								<span class="image main">
-									<figure><img src="assets/images/strawberryMansion2.jpg" alt="">
-								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
-								</span>
-								<span class="image main">
-									<figure><img src="assets/images/strawberryMansion3.jpg" alt="">
-								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+									<figure><img src="assets/images/may3.JPG" alt="">
+								    <figcaption>May Lake, CA</figcaption></figure>
 								</span>
 								<!-- <span class="image main">
 									<figure><img src="assets/images/campsite.jpg" alt="">
@@ -59,12 +53,18 @@ var pictureHTML = `
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/everything.jpg" alt="">
-								    <figcaption>SF, CA</figcaption></figure>
+								    <figcaption>SF, CA (Evan Jonokuchi)</figcaption></figure>
 								</span>
+								<span class="image main">
+									<figure><img src="assets/images/halfDome.JPG" alt="">
+								    <figcaption>Yosemite, CA</figcaption></figure>
+								</span>
+								
 								<span class="image main">
 									<figure><img src="assets/images/sutro.JPG" alt="">
 								    <figcaption>SF, CA</figcaption></figure>
 								</span>
+								
 								<span class="image main">
 									<figure><img src="assets/images/campsite2.JPG" alt="">
 								    <figcaption>Yosemite, CA</figcaption></figure>
@@ -97,13 +97,14 @@ var pictureHTML = `
 									<figure><img src="assets/images/athens.jpg" alt="">
 								    <figcaption>Athens, Greece</figcaption></figure>
 								</span>
-								<span class="image main">
-									<figure><img src="assets/images/halfDome.JPG" alt="">
-								    <figcaption>Yosemite, CA</figcaption></figure>
-								</span>
+								
 								<span class="image main">
 									<figure><img src="assets/images/beach.jpg" alt="">
 								    <figcaption>Sauni, Greece</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/MtDave.jpg" alt="">
+								    <figcaption>Mt. Dave, SF</figcaption></figure>
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/allGreen.jpg" alt="">
@@ -128,6 +129,10 @@ var pictureHTML = `
 								<span class="image main">
 									<figure><img src="assets/images/fallsBridge.jpg" alt="">
 								    <figcaption>Falls Bridge, Philly</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/Tenaya.jpg" alt="">
+								    <figcaption>Tenaya Canyon, CA</figcaption></figure>
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/smile.jpg" alt="">
