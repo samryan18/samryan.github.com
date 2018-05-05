@@ -16,16 +16,23 @@ navigator.sayswho = (function () {
 
 $(document).ready(function () {   
     $.getJSON("http://ipinfo.io", function (data) {
-        message += ("New pageview. Browser: " + navigator.sayswho + ". ");
-        message += ("\nCity: " + data.city
+        message = ("New pageview. ");
+
+        // device detection
+        var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+        if (isMobile.matches) message += "Probably mobile device. ";
+        else message += "Probably desktop. ";
+        
+        message += ("Browser: " + navigator.sayswho + ". ");
+        message += ("City: " + data.city
             + ", County: " + data.country
             + ", IP: " + data.ip
             + ", Location: " + data.loc
             + ", Organisation: " + data.org
             + ", Postal Code: " + data.postal
-            + ", Region: " + data.region + "")
-
-        sendMeEmail(message)
+            + ", Region: " + data.region + "");
+            
+        sendMeEmail(message);
     }); 
 });
 
