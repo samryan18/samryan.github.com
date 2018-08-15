@@ -28,7 +28,7 @@ var pictureHTML = `
 								    <figcaption>Grand Canyon</figcaption></figure>
 								</span>
 								<span class="image main">
-									<figure><img src="assets/images/eclipse.JPG" alt="">
+									<figure><img src="assets/images/eclipse.jpg" alt="">
 									<figcaption>Borah Peak, ID</figcaption></figure>
 								</span>
 								<span class="image main">
@@ -78,11 +78,11 @@ var pictureHTML = `
 								    <figcaption>May Lake, CA</figcaption></figure>
 								</span>
 								<span class="image main">
-									<figure><img src="assets/images/el_cap.JPG" alt="">
+									<figure><img src="assets/images/el_cap.jpg" alt="">
 								    <figcaption>Yosemite, CA</figcaption></figure>
 								</span>
 								<span class="image main">
-									<figure><img src="assets/images/half_dome_dark.JPG" alt="">
+									<figure><img src="assets/images/half_dome_dark.jpg" alt="">
 								    <figcaption>Yosemite, CA</figcaption></figure>
 								</span>
 								<span class="image main">
