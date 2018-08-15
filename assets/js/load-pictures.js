@@ -19,7 +19,7 @@ var picture_files = {
 	"bus.JPG": "Walmart Parking Lot, Tennessee",
 	"MayLake.jpg": "May Lake, CA",
 	"may3.JPG": "May Lake, CA",
-	"campsite.jpg": "Yosemite, CA",
+	"campsite.JPG": "Yosemite, CA",
 	"knox.JPG": "SF, CA",
 	"Amoudi.jpg": "Amoudi Bay, Greece",
 	"halfDome.JPG": "Yosemite, CA",
