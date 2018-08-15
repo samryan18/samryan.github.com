@@ -18,14 +18,18 @@ var pictureHTML = `
 								<span class="image main">
 									<figure><img src="assets/images/strawberryMansion2.jpg" alt="">
 								    <figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
-								</span>
-								<span class="image main">
-									<figure><img src="assets/images/overlay.png" alt=""/>
-								    <figcaption>Peace Valley, PA (Evan Jonokuchi)</figcaption></figure>
-								</span>
-								<span class="image main">
+								</span> ` +
+								// <span class="image main">
+								// 	<figure><img src="assets/images/overlay.png" alt=""/>
+								//     <figcaption>Peace Valley, PA (Evan Jonokuchi)</figcaption></figure>
+								// </span>
+								` <span class="image main">
 									<figure><img src="assets/images/views.JPG" alt="" >
 								    <figcaption>Grand Canyon</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/eclipse.JPG" alt="">
+									<figcaption>Borah Peak, ID</figcaption></figure>
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/bus.JPG" alt="">
@@ -50,12 +54,12 @@ var pictureHTML = `
 								<span class="image main">
 									<figure><img src="assets/images/Amoudi.jpg" alt="">
 								    <figcaption>Amoudi Bay, Greece</figcaption></figure>
-								</span>
-								<span class="image main">
-									<figure><img src="assets/images/everything.jpg" alt="">
-								    <figcaption>SF, CA (Evan Jonokuchi)</figcaption></figure>
-								</span>
-								<span class="image main">
+								</span> ` +
+								// <span class="image main">
+								// 	<figure><img src="assets/images/everything.jpg" alt="">
+								//     <figcaption>SF, CA (Evan Jonokuchi)</figcaption></figure>
+								// </span>
+								` <span class="image main">
 									<figure><img src="assets/images/halfDome.JPG" alt="">
 								    <figcaption>Yosemite, CA</figcaption></figure>
 								</span>
@@ -72,6 +76,14 @@ var pictureHTML = `
 								<span class="image main">
 									<figure><img src="assets/images/may2.JPG" alt="">
 								    <figcaption>May Lake, CA</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/el_cap.JPG" alt="">
+								    <figcaption>Yosemite, CA</figcaption></figure>
+								</span>
+								<span class="image main">
+									<figure><img src="assets/images/half_dome_dark.JPG" alt="">
+								    <figcaption>Yosemite, CA</figcaption></figure>
 								</span>
 								<span class="image main">
 									<figure><img src="assets/images/theRoad.JPG" alt="">
