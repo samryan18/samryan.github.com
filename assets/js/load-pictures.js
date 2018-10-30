@@ -1,5 +1,3 @@
-/* Only loads pictures after home page loads so page loads faster */
-
 PATH = "assets/images/"
 function buildHTML(fileName, location = "", path = PATH) {
 	return `			
@@ -15,12 +13,16 @@ var picture_files = {
 	"strawberryMansion3.jpg": "Strawberry Mansion Bridge, Philly",
 	"strawberryMansion2.jpg": "Strawberry Mansion Bridge, Philly",
 	"views.JPG": "Grand Canyon",
-	"eclipse.jpg": "Borah Peak, ID",
+	"eclipse.jpg": "Borah Peak, ID (eclipse!) ",
 	"bus.JPG": "Walmart Parking Lot, Tennessee",
 	"MayLake.jpg": "May Lake, CA",
 	"may3.JPG": "May Lake, CA",
 	"campsite.JPG": "Yosemite, CA",
+	"yosem_hd.jpeg": "Yosemite, CA",
+	"bow_lake.jpeg": "Bow Lake, Canada",
+	"moraine_lake.JPG": "Moraine Lake, Canada",
 	"knox.JPG": "SF, CA",
+	"yellowstone.JPG": "Yellowstone, WY",
 	"Amoudi.jpg": "Amoudi Bay, Greece",
 	"halfDome.JPG": "Yosemite, CA",
 	"sutro.JPG": "SF, CA",
@@ -47,7 +49,6 @@ var picture_files = {
 	"ryanWomen.jpg": "Outside Chicago, IL",
 	"Santorini.JPG": "Santorini, Greece",
 	"edinburgh.JPG": "Edinburgh, Scotland",
-	"lakeDistrict.JPG": "Lake District, UK",
 	"johnChess.JPG": "Glen Park, SF",
 	"ggb.JPG": "SF, CA",
 	"hammock.JPG": "Russian River, CA"
